@@ -10,20 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     let screen = UIScreen.main.bounds
-    
-    private var yellowReminders: [Reminder] = []
-    private var grayReminders: [Reminder] = []
-    @State private var showAlert = false
-    @State private var trashSelection = 0
-    @State private var daySelection = 0
-    private var yellowTrash = Trash(reminders: [], color: .yellow)
-    private var grayTrash = Trash(reminders: [], color: .gray)
+    @ObservedObject private var viewModel = ContentViewViewModel()
     
     var body: some View {
         ZStack {
             home
-            ReminderView(showAlert: $showAlert, trashSelection: $trashSelection, daySelection: $daySelection)
-            .opacity(showAlert ? 1 : 0)
+            ReminderView(showAlert: $viewModel.showAlert, trashSelection: $viewModel.trashSelection, daySelection: $viewModel.daySelection)
+                .opacity(viewModel.showAlert ? 1 : 0)
         }
         .background(Color.ui.gray)
     }
@@ -41,7 +34,7 @@ struct ContentView: View {
                         .font(.custom(Font.texturina.rawValue, size: 40))
                         .foregroundColor(.white)
                         .padding(.top, 30)
-                    TrashView(trash: yellowTrash)
+                    TrashView(trash: viewModel.yellowTrash)
                     Spacer()
                 }
             }
@@ -53,11 +46,11 @@ struct ContentView: View {
                 
                 VStack {
                     
-                    TrashView(trash: grayTrash)
+                    TrashView(trash: viewModel.grayTrash)
                     
                     Spacer()
                     Button {
-                        showAlert.toggle()
+                        viewModel.showAlert.toggle()
                     } label: {
                         Label("Ajouter un rappel", systemImage: "timer")
                             .font(.system(size: 20))
