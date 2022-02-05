@@ -14,5 +14,5 @@ enum TrashColor {
 struct Reminder: Identifiable {
     let id = UUID()
     var trashColor: TrashColor
-    var collectDays: [Date]
+    var collectDay: String
 }
