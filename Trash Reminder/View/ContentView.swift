@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Trash Reminder")
+                .font(.custom(Font.texturina.rawValue, size: 30))
+            Spacer()
+        }
     }
 }
 
