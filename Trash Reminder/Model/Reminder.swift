@@ -9,6 +9,15 @@ import Foundation
 
 enum TrashColor {
     case gray, yellow
+    
+    var translation: String {
+        switch self {
+        case .gray:
+             return "Grise"
+        case .yellow:
+            return "Jaune"
+        }
+    }
 }
 
 struct Reminder: Identifiable {
