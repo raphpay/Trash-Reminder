@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8652ACF727AF0947003B6EFD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652ACF627AF0947003B6EFD /* AppState.swift */; };
 		869752EA27AE936800B499BB /* Trash_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752E927AE936800B499BB /* Trash_ReminderApp.swift */; };
 		869752EC27AE936800B499BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752EB27AE936800B499BB /* ContentView.swift */; };
 		869752EE27AE936800B499BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869752ED27AE936800B499BB /* Assets.xcassets */; };
@@ -16,16 +17,17 @@
 		8697530127AE96E200B499BB /* Texturina.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 869752FB27AE95D900B499BB /* Texturina.ttf */; };
 		8697530327AE987A00B499BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530227AE987A00B499BB /* Color+Ext.swift */; };
 		8697530527AE988700B499BB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530427AE988700B499BB /* Assets.swift */; };
-		8697530827AE995C00B499BB /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530727AE995C00B499BB /* Reminder.swift */; };
 		8697530D27AEA8E900B499BB /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530C27AEA8E900B499BB /* ReminderView.swift */; };
 		8697530F27AEB5E300B499BB /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530E27AEB5E300B499BB /* DismissButton.swift */; };
 		8697531127AEB5FA00B499BB /* TrashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697531027AEB5FA00B499BB /* TrashImage.swift */; };
-		8697531527AEB64900B499BB /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697531427AEB64900B499BB /* Trash.swift */; };
 		8697531827AEB6A300B499BB /* TrashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697531727AEB6A300B499BB /* TrashView.swift */; };
 		8697531C27AEBA0C00B499BB /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697531B27AEBA0C00B499BB /* ContentViewViewModel.swift */; };
+		869C58DA27AF2592000CA7A4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C58D927AF2591000CA7A4 /* Reminder.swift */; };
+		869C58DC27AF25AA000CA7A4 /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C58DB27AF25AA000CA7A4 /* Trash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8652ACF627AF0947003B6EFD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		869752E627AE936800B499BB /* Trash Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trash Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		869752E927AE936800B499BB /* Trash_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash_ReminderApp.swift; sourceTree = "<group>"; };
 		869752EB27AE936800B499BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,13 +39,13 @@
 		869752FE27AE964500B499BB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8697530227AE987A00B499BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		8697530427AE988700B499BB /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		8697530727AE995C00B499BB /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		8697530C27AEA8E900B499BB /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		8697530E27AEB5E300B499BB /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 		8697531027AEB5FA00B499BB /* TrashImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashImage.swift; sourceTree = "<group>"; };
-		8697531427AEB64900B499BB /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
 		8697531727AEB6A300B499BB /* TrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashView.swift; sourceTree = "<group>"; };
 		8697531B27AEBA0C00B499BB /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		869C58D927AF2591000CA7A4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		869C58DB27AF25AA000CA7A4 /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,11 @@
 			children = (
 				8697530927AE99BB00B499BB /* Model */,
 				869752F827AE941D00B499BB /* View */,
+				8697531D27AEBB3600B499BB /* ViewModel */,
 				869752F727AE941700B499BB /* Support */,
 				8697530627AE988D00B499BB /* Utils */,
 				869752FD27AE961700B499BB /* Trash-Reminder-Info.plist */,
 				869752EF27AE936800B499BB /* Preview Content */,
-				8697531B27AEBA0C00B499BB /* ContentViewViewModel.swift */,
 			);
 			path = "Trash Reminder";
 			sourceTree = "<group>";
@@ -136,8 +138,8 @@
 		8697530927AE99BB00B499BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8697530727AE995C00B499BB /* Reminder.swift */,
-				8697531427AEB64900B499BB /* Trash.swift */,
+				869C58D927AF2591000CA7A4 /* Reminder.swift */,
+				869C58DB27AF25AA000CA7A4 /* Trash.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +169,15 @@
 				8697531027AEB5FA00B499BB /* TrashImage.swift */,
 			);
 			path = Atoms;
+			sourceTree = "<group>";
+		};
+		8697531D27AEBB3600B499BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8697531B27AEBA0C00B499BB /* ContentViewViewModel.swift */,
+				8652ACF627AF0947003B6EFD /* AppState.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,13 +255,14 @@
 				869752EC27AE936800B499BB /* ContentView.swift in Sources */,
 				8697531127AEB5FA00B499BB /* TrashImage.swift in Sources */,
 				8697530327AE987A00B499BB /* Color+Ext.swift in Sources */,
+				869C58DA27AF2592000CA7A4 /* Reminder.swift in Sources */,
 				869752EA27AE936800B499BB /* Trash_ReminderApp.swift in Sources */,
 				8697530D27AEA8E900B499BB /* ReminderView.swift in Sources */,
 				8697531827AEB6A300B499BB /* TrashView.swift in Sources */,
-				8697530827AE995C00B499BB /* Reminder.swift in Sources */,
-				8697531527AEB64900B499BB /* Trash.swift in Sources */,
+				869C58DC27AF25AA000CA7A4 /* Trash.swift in Sources */,
 				8697530527AE988700B499BB /* Assets.swift in Sources */,
 				8697530F27AEB5E300B499BB /* DismissButton.swift in Sources */,
+				8652ACF727AF0947003B6EFD /* AppState.swift in Sources */,
 				869752FF27AE964500B499BB /* Font.swift in Sources */,
 				8697531C27AEBA0C00B499BB /* ContentViewViewModel.swift in Sources */,
 			);

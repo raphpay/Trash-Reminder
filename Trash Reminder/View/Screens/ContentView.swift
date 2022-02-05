@@ -11,6 +11,7 @@ struct ContentView: View {
     
     let screen = UIScreen.main.bounds
     @ObservedObject private var viewModel = ContentViewViewModel()
+    let mockTrash = Trash(reminders: [], color: .yellow)
     
     var body: some View {
         ZStack {
@@ -34,7 +35,7 @@ struct ContentView: View {
                         .font(.custom(Font.texturina.rawValue, size: 40))
                         .foregroundColor(.white)
                         .padding(.top, 30)
-                    TrashView(trash: viewModel.yellowTrash)
+                    TrashView(trash: mockTrash)
                     Spacer()
                 }
             }
@@ -46,7 +47,7 @@ struct ContentView: View {
                 
                 VStack {
                     
-                    TrashView(trash: viewModel.grayTrash)
+                    TrashView(trash: mockTrash)
                     
                     Spacer()
                     Button {

@@ -7,21 +7,8 @@
 
 import Foundation
 
-enum TrashColor {
-    case gray, yellow
-    
-    var translation: String {
-        switch self {
-        case .gray:
-             return "Grise"
-        case .yellow:
-            return "Jaune"
-        }
-    }
-}
-
 struct Reminder: Identifiable {
     let id = UUID()
-    var trashColor: TrashColor
+    var color: TrashColor
     var collectDay: String
 }
