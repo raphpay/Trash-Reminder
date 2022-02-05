@@ -11,8 +11,9 @@ extension Color {
     static let ui = Color.Custom()
     
     struct Custom {
-        let gray     = Color("Gray")
-        let yellow    = Color("Yellow")
+        let gray        = Color("Gray")
+        let yellow      = Color("Yellow")
+        let secondary   = Color("Secondary")
     }
 }
 

@@ -16,6 +16,7 @@
 		8697530127AE96E200B499BB /* Texturina.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 869752FB27AE95D900B499BB /* Texturina.ttf */; };
 		8697530327AE987A00B499BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530227AE987A00B499BB /* Color+Ext.swift */; };
 		8697530527AE988700B499BB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530427AE988700B499BB /* Assets.swift */; };
+		8697530827AE995C00B499BB /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530727AE995C00B499BB /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		869752FE27AE964500B499BB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8697530227AE987A00B499BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		8697530427AE988700B499BB /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		8697530727AE995C00B499BB /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		869752E827AE936800B499BB /* Trash Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				8697530927AE99BB00B499BB /* Model */,
 				869752F827AE941D00B499BB /* View */,
 				869752F727AE941700B499BB /* Support */,
 				8697530627AE988D00B499BB /* Utils */,
@@ -114,6 +117,14 @@
 				8697530027AE96A100B499BB /* Font */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8697530927AE99BB00B499BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8697530727AE995C00B499BB /* Reminder.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				869752EC27AE936800B499BB /* ContentView.swift in Sources */,
 				8697530327AE987A00B499BB /* Color+Ext.swift in Sources */,
 				869752EA27AE936800B499BB /* Trash_ReminderApp.swift in Sources */,
+				8697530827AE995C00B499BB /* Reminder.swift in Sources */,
 				8697530527AE988700B499BB /* Assets.swift in Sources */,
 				869752FF27AE964500B499BB /* Font.swift in Sources */,
 			);
