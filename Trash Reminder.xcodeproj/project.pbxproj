@@ -14,6 +14,8 @@
 		869752FA27AE944300B499BB /* Texturina-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 869752F927AE944300B499BB /* Texturina-Italic.ttf */; };
 		869752FF27AE964500B499BB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752FE27AE964500B499BB /* Font.swift */; };
 		8697530127AE96E200B499BB /* Texturina.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 869752FB27AE95D900B499BB /* Texturina.ttf */; };
+		8697530327AE987A00B499BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530227AE987A00B499BB /* Color+Ext.swift */; };
+		8697530527AE988700B499BB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697530427AE988700B499BB /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		869752FB27AE95D900B499BB /* Texturina.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Texturina.ttf; sourceTree = "<group>"; };
 		869752FD27AE961700B499BB /* Trash-Reminder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Trash-Reminder-Info.plist"; sourceTree = SOURCE_ROOT; };
 		869752FE27AE964500B499BB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8697530227AE987A00B499BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		8697530427AE988700B499BB /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			children = (
 				869752F827AE941D00B499BB /* View */,
 				869752F727AE941700B499BB /* Support */,
+				8697530627AE988D00B499BB /* Utils */,
 				869752FD27AE961700B499BB /* Trash-Reminder-Info.plist */,
 				869752EF27AE936800B499BB /* Preview Content */,
 			);
@@ -79,7 +84,6 @@
 			children = (
 				869752E927AE936800B499BB /* Trash_ReminderApp.swift */,
 				869752ED27AE936800B499BB /* Assets.xcassets */,
-				8697530027AE96A100B499BB /* Font */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -100,6 +104,16 @@
 				869752FE27AE964500B499BB /* Font.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		8697530627AE988D00B499BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8697530227AE987A00B499BB /* Color+Ext.swift */,
+				8697530427AE988700B499BB /* Assets.swift */,
+				8697530027AE96A100B499BB /* Font */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				869752EC27AE936800B499BB /* ContentView.swift in Sources */,
+				8697530327AE987A00B499BB /* Color+Ext.swift in Sources */,
 				869752EA27AE936800B499BB /* Trash_ReminderApp.swift in Sources */,
+				8697530527AE988700B499BB /* Assets.swift in Sources */,
 				869752FF27AE964500B499BB /* Font.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
