@@ -7,6 +7,9 @@
 
 import Foundation
 
+let GRAY_TRASH_DAYS_KEY = "GRAY_TRASH_DAYS_KEY"
+let YELLOW_TRASH_DAYS_KEY = "YELLOW_TRASH_DAYS_KEY"
+
 enum TrashColor: String {
     case yellow, gray
     
@@ -16,6 +19,15 @@ enum TrashColor: String {
             return "Jaune"
         case .gray:
             return "Grise"
+        }
+    }
+    
+    var userDefaultsKey: String {
+        switch self {
+        case .yellow:
+            return GRAY_TRASH_DAYS_KEY
+        case .gray:
+            return YELLOW_TRASH_DAYS_KEY
         }
     }
 }
