@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             home
-            ReminderView(showAlert: $viewModel.showAlert, trashSelection: $viewModel.trashSelection, daySelection: $viewModel.daySelection)
+            ReminderView(showAlert: $viewModel.showAlert)
                 .opacity(viewModel.showAlert ? 1 : 0)
         }
         .background(Color.ui.gray)
