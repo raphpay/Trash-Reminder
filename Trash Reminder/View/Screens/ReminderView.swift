@@ -71,6 +71,11 @@ struct ReminderView: View {
             .offset(y: showAlert ? 0 : 1000)
             .animation(.spring(), value: showAlert)
         }
+        .onTapGesture {
+            withAnimation {
+                showAlert.toggle()
+            }
+        }
     }
 }
 
