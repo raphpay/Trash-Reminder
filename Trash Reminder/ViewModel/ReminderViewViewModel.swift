@@ -13,41 +13,17 @@ final class ReminderViewViewModel: ObservableObject {
     let weekDays = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     
     func addReminder() {
-        // TODO: To be refactored
-        // TODO: Remove print statements
-        switch trashSelection {
-        case 0:
-            if var array = UserDefaults.standard.array(forKey: GRAY_TRASH_DAYS_KEY) as? [Int] {
-                print("Gray already created", array.contains(where: { $0 == daySelection }))
-                if array.contains(where: { $0 == daySelection }) {
-                    print("Gray contains the day ==> Error")
-                } else {
+        let trashKey = trashSelection == TrashColor.gray.number ? GRAY_TRASH_DAYS_KEY : YELLOW_TRASH_DAYS_KEY
+        let storage = UserDefaults.standard
+        
+        if var array = storage.array(forKey: trashKey) as? [Int],
+            !array.isEmpty {
+                if !array.contains(where: { $0 == daySelection}) {
                     array.append(daySelection)
-                    UserDefaults.standard.set(array, forKey: GRAY_TRASH_DAYS_KEY)
-                    print("Gray don't contains the day. New array =", array)
+                    storage.set(array, forKey: trashKey)
                 }
-            } else {
-                UserDefaults.standard.set([daySelection], forKey: GRAY_TRASH_DAYS_KEY)
-                print("Gray not created")
-            }
-            break
-        case 1:
-            if var array = UserDefaults.standard.array(forKey: YELLOW_TRASH_DAYS_KEY) as? [Int] {
-                print("Yellow already created", array)
-                if array.contains(where: { $0 == daySelection }) {
-                    print("Yellow contains the day ==> Error")
-                } else {
-                    array.append(daySelection)
-                    UserDefaults.standard.set(array, forKey: YELLOW_TRASH_DAYS_KEY)
-                    print("Yellow don't contains the day. New array =", array)
-                }
-            } else {
-                UserDefaults.standard.set([daySelection], forKey: YELLOW_TRASH_DAYS_KEY)
-                print("Yellow already created")
-            }
-            break
-        default:
-            break
+        } else {
+            storage.set([daySelection], forKey: trashKey)
         }
     }
 
