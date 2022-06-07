@@ -20,10 +20,25 @@ struct ReminderView: View {
                 .edgesIgnoringSafeArea(.all)
                 .opacity(showAlert ? 0.4 : 0)
                 .animation(.spring(), value: showAlert)
+                .onTapGesture {
+                    withAnimation {
+                        showAlert.toggle()
+                    }
+                }
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.white)
                     .frame(width: 250, height: 250)
+                    .overlay {
+                        Button {
+                            withAnimation {
+                                showAlert.toggle()
+                            }
+                        } label: {
+                            DismissButton()
+                        }
+
+                    }
                 VStack(alignment: .leading) {
                     Text("Poubelle")
                         .font(.custom(Font.texturina.rawValue, size: 20))
@@ -59,22 +74,9 @@ struct ReminderView: View {
                 }
                 .padding()
                 .frame(width: 250, height: 250)
-                .overlay {
-                    Button {
-                        showAlert.toggle()
-                    } label: {
-                        DismissButton()
-                    }
-
-                }
             }
             .offset(y: showAlert ? 0 : 1000)
             .animation(.spring(), value: showAlert)
-        }
-        .onTapGesture {
-            withAnimation {
-                showAlert.toggle()
-            }
         }
     }
 }
