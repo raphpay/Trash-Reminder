@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		864B8BBC284F710300B64B29 /* ReminderViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B8BBB284F710300B64B29 /* ReminderViewViewModel.swift */; };
 		8652ACF727AF0947003B6EFD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652ACF627AF0947003B6EFD /* AppState.swift */; };
 		869752EA27AE936800B499BB /* Trash_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752E927AE936800B499BB /* Trash_ReminderApp.swift */; };
 		869752EC27AE936800B499BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752EB27AE936800B499BB /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		864B8BBB284F710300B64B29 /* ReminderViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewViewModel.swift; sourceTree = "<group>"; };
 		8652ACF627AF0947003B6EFD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		869752E627AE936800B499BB /* Trash Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trash Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		869752E927AE936800B499BB /* Trash_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash_ReminderApp.swift; sourceTree = "<group>"; };
@@ -174,8 +176,9 @@
 		8697531D27AEBB3600B499BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8697531B27AEBA0C00B499BB /* ContentViewViewModel.swift */,
 				8652ACF627AF0947003B6EFD /* AppState.swift */,
+				8697531B27AEBA0C00B499BB /* ContentViewViewModel.swift */,
+				864B8BBB284F710300B64B29 /* ReminderViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				869752EC27AE936800B499BB /* ContentView.swift in Sources */,
 				8697531127AEB5FA00B499BB /* TrashImage.swift in Sources */,
 				8697530327AE987A00B499BB /* Color+Ext.swift in Sources */,
+				864B8BBC284F710300B64B29 /* ReminderViewViewModel.swift in Sources */,
 				869C58DA27AF2592000CA7A4 /* Reminder.swift in Sources */,
 				869752EA27AE936800B499BB /* Trash_ReminderApp.swift in Sources */,
 				8697530D27AEA8E900B499BB /* ReminderView.swift in Sources */,

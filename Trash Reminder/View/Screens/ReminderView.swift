@@ -10,9 +10,8 @@ import SwiftUI
 struct ReminderView: View {
     
     @Binding var showAlert: Bool
-    @Binding var trashSelection: Int
-    @Binding var daySelection: Int
-    private let weekDays = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    
+    @StateObject private var viewModel = ReminderViewViewModel()
     
     var body: some View {
         ZStack {
@@ -20,33 +19,48 @@ struct ReminderView: View {
                 .edgesIgnoringSafeArea(.all)
                 .opacity(showAlert ? 0.4 : 0)
                 .animation(.spring(), value: showAlert)
+                .onTapGesture {
+                    withAnimation {
+                        showAlert.toggle()
+                    }
+                }
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.white)
                     .frame(width: 250, height: 250)
+                    .overlay {
+                        Button {
+                            withAnimation {
+                                showAlert.toggle()
+                            }
+                        } label: {
+                            DismissButton()
+                        }
+
+                    }
                 VStack(alignment: .leading) {
                     Text("Poubelle")
                         .font(.custom(Font.texturina.rawValue, size: 20))
-                    Picker("Quelle est la couleur de la poubelle ?", selection: $trashSelection, content: {
+                    Picker("Quelle est la couleur de la poubelle ?", selection: $viewModel.trashSelection, content: {
                         // TODO: Find a way to set this text to white when selected
                         Text("Grise").tag(0)
                         Text("Jaune").tag(1)
                     })
                         .pickerStyle(.segmented)
-                        .colorMultiply(trashSelection == 0 ? .ui.gray : .ui.yellow)
-                        .animation(.easeIn, value: trashSelection)
+                        .colorMultiply(viewModel.trashSelection == 0 ? .ui.gray : .ui.yellow)
+                        .animation(.easeIn, value: viewModel.trashSelection)
                     
                     Text("Date")
                         .font(.custom(Font.texturina.rawValue, size: 20))
-                    Picker("Quelle est la date de ramassage ?",selection: $daySelection) {
-                        ForEach(0..<weekDays.count, id: \.self) { day in
-                            Text("\(weekDays[day]) Matin").tag(day)
+                    Picker("Quelle est la date de ramassage ?",selection: $viewModel.daySelection) {
+                        ForEach(0..<viewModel.weekDays.count, id: \.self) { day in
+                            Text("\(viewModel.weekDays[day]) Matin").tag(day)
                         }
                     }
                     .pickerStyle(.automatic)
                     
                     Button {
-                        //
+                        viewModel.addReminder()
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -59,14 +73,6 @@ struct ReminderView: View {
                 }
                 .padding()
                 .frame(width: 250, height: 250)
-                .overlay {
-                    Button {
-                        showAlert.toggle()
-                    } label: {
-                        DismissButton()
-                    }
-
-                }
             }
             .offset(y: showAlert ? 0 : 1000)
             .animation(.spring(), value: showAlert)
@@ -76,6 +82,6 @@ struct ReminderView: View {
 
 struct ReminderView_Previews: PreviewProvider {
     static var previews: some View {
-        ReminderView(showAlert: .constant(true), trashSelection: .constant(0), daySelection: .constant(0))
+        ReminderView(showAlert: .constant(true))
     }
 }
