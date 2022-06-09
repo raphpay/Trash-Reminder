@@ -9,6 +9,4 @@ import Foundation
 
 final class ContentViewViewModel: ObservableObject {
     @Published var showAlert = false
-    @Published var trashSelection = 0
-    @Published var daySelection = 0
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct TrashView: View {
     
     var trash: Trash
+    var days: Data
     
     var body: some View {
         HStack(alignment: .top) {
@@ -26,8 +27,8 @@ struct TrashView: View {
                 Text("Ramassage")
                     .font(.custom(Font.texturina.rawValue, size: 15))
                     .foregroundColor(.ui.secondary)
-                ForEach(trash.reminders, id: \.id) { reminder in
-                    Text(reminder.collectDay)
+                ForEach(days.getPickUpDays(), id: \.self) { reminder in
+                    Text(reminder)
                         .font(.custom(Font.texturina.rawValue, size: 25))
                         .foregroundColor(.white)
                 }
@@ -39,11 +40,14 @@ struct TrashView: View {
                 TrashImage(image: Assets.yellowTrash)
             }
         }
+        .onAppear {
+            print("TrashView", trash.reminders.isEmpty)
+        }
     }
 }
 
 struct TrashView_Previews: PreviewProvider {
     static var previews: some View {
-        TrashView(trash: Trash(reminders: [], color: .yellow))
+        TrashView(trash: Trash(reminders: [], color: .yellow), days: Data())
     }
 }

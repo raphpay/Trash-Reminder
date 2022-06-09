@@ -13,17 +13,23 @@ final class ReminderViewViewModel: ObservableObject {
     let weekDays = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     
     func addReminder() {
+        // TODO: This key is not needed
         let trashKey = trashSelection == TrashColor.gray.number ? GRAY_TRASH_DAYS_KEY : YELLOW_TRASH_DAYS_KEY
-        let storage = UserDefaults.standard
+        let dataTrashKey = trashSelection == TrashColor.gray.number ? DATA_GRAY_TRASH_DAYS_KEY : DATA_YELLOW_TRASH_DAYS_KEY
         
-        if var array = storage.array(forKey: trashKey) as? [Int],
+        // TODO: Refactor
+        if var array = UserDefaults.standard.array(forKey: trashKey) as? [Int],
             !array.isEmpty {
                 if !array.contains(where: { $0 == daySelection}) {
                     array.append(daySelection)
-                    storage.set(array, forKey: trashKey)
+                    UserDefaults.standard.set(array as [Int], forKey: trashKey)
+                    let arrayData = Storage.archiveIntArray(object: array)
+                    UserDefaults.standard.set(arrayData, forKey: dataTrashKey)
                 }
         } else {
-            storage.set([daySelection], forKey: trashKey)
+            UserDefaults.standard.set([daySelection], forKey: trashKey)
+            let arrayData = Storage.archiveIntArray(object: [daySelection])
+            UserDefaults.standard.set(arrayData, forKey: dataTrashKey)
         }
     }
 

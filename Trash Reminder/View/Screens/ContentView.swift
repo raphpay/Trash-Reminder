@@ -12,6 +12,10 @@ struct ContentView: View {
     let screen = UIScreen.main.bounds
     @ObservedObject private var viewModel = ContentViewViewModel()
     let mockTrash = Trash(reminders: [], color: .yellow)
+    @AppStorage(DATA_GRAY_TRASH_DAYS_KEY) private var grayData = Data()
+    @AppStorage(DATA_YELLOW_TRASH_DAYS_KEY) private var yellowData = Data()
+    @State private var grayTrash: Trash = Trash(reminders: [], color: .gray)
+    @State private var yellowTrash: Trash = Trash(reminders: [], color: .yellow)
     
     var body: some View {
         ZStack {
@@ -35,7 +39,7 @@ struct ContentView: View {
                         .font(.custom(Font.texturina.rawValue, size: 40))
                         .foregroundColor(.white)
                         .padding(.top, 30)
-                    TrashView(trash: mockTrash)
+                    TrashView(trash: yellowTrash, days: yellowData)
                     Spacer()
                 }
             }
@@ -46,9 +50,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    
-                    TrashView(trash: mockTrash)
-                    
+                    TrashView(trash: grayTrash, days: grayData)
                     Spacer()
                     Button {
                         viewModel.showAlert.toggle()
